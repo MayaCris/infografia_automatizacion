@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   Infografía IA - Main Stylesheet
+   ========================================================================== */
+
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #073B4C;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/* Fixed gradient text with fallback */
+.gradient-text {
+    background: linear-gradient(to right, #FFD166, #06D6A0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #06D6A0; /* Fallback for unsupported browsers */
+}
+
+/* Ensure text is visible if gradient fails */
+@supports not (-webkit-background-clip: text) {
+    .gradient-text {
+        color: #06D6A0;
+    }
+}
+
+/* ==========================================================================
+   Components
+   ========================================================================== */
+
+/* Stat Cards */
+.stat-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Improved accessibility for interactive elements */
+.stat-card:focus {
+    outline: 2px solid #06D6A0;
+    outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Chart Styles
+   ========================================================================== */
+
+/* Chart containers */
+.chart-container {
+    position: relative;
+    margin: 0 auto;
+}
+
+.chart-height {
+    height: 400px;
+    max-height: 60vh;
+}
+
+.chart-height-medium {
+    height: 350px;
+    max-height: 50vh;
+}
+
+.chart-height-small {
+    height: 300px;
+    max-height: 40vh;
+}
+
+/* Chart loading states */
+.chart-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #94a3b8;
+    font-size: 14px;
+    z-index: 1;
+}
+
+/* Canvas accessibility */
+canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==========================================================================
+   Accessibility
+   ========================================================================== */
+
+/* Screen reader only class */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.sr-only.focus\:not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .stat-card {
+        transition: none;
+    }
+}
+
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
+
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    .stat-card {
+        background-color: white;
+        border: 1px solid #ccc;
+    }
+}

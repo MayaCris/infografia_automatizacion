@@ -1,0 +1,26 @@
+# Security Headers Configuration
+# Este archivo documenta las cabeceras de seguridad implementadas
+
+# Content Security Policy (CSP)
+# Previene ataques XSS limitando fuentes de contenido
+Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;
+
+# X-Content-Type-Options
+# Previene ataques MIME sniffing
+X-Content-Type-Options: nosniff
+
+# X-Frame-Options
+# Previene clickjacking
+X-Frame-Options: DENY
+
+# X-XSS-Protection
+# Habilita protección XSS del navegador
+X-XSS-Protection: 1; mode=block
+
+# Referrer-Policy
+# Controla información enviada en el header Referer
+Referrer-Policy: strict-origin-when-cross-origin
+
+# Permissions-Policy
+# Controla acceso a APIs del navegador
+Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()

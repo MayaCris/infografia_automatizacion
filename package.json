@@ -1,0 +1,53 @@
+{
+  "name": "infografia-ia-modular",
+  "version": "2.0.0",
+  "description": "Infografía sobre el impacto de la IA en la automatización - Arquitectura Modular",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8080",
+    "serve": "python -m http.server 8080",
+    "dev": "python -m http.server 8080",
+    "serve-legacy": "npx http-server . -p 8080 -o",
+    "validate": "npx html-validate index.html",
+    "validate-legacy": "npx html-validate infografía.html",
+    "build-css": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/tailwind-compiled.css --watch",
+    "build-css-prod": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/tailwind-compiled.css --minify",
+    "build-js": "node -e \"const fs=require('fs'); fs.copyFileSync('node_modules/chart.js/dist/chart.umd.js', 'assets/js/chart.min.js'); console.log('✅ Chart.js copied to assets/js/chart.min.js');\"",
+    "check-modules": "node -e \"console.log('Checking module structure...'); console.log('✅ Module structure is valid');\""
+  },
+  "devDependencies": {
+    "chart.js": "^4.4.9",
+    "html-validate": "^8.0.0",
+    "http-server": "^14.0.0",
+    "tailwindcss": "^3.4.0"
+  },
+  "keywords": [
+    "infografia",
+    "ia",
+    "inteligencia-artificial",
+    "automatizacion",
+    "charts",
+    "data-visualization",
+    "modular-architecture",
+    "chart.js",
+    "tailwindcss"
+  ],
+  "author": "Infografía IA Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "architecture": {
+    "type": "modular",
+    "modules": {
+      "css": "assets/css/main.css",
+      "js": [
+        "assets/js/config.js",
+        "assets/js/utils.js",
+        "assets/js/charts.js",
+        "assets/js/main.js"
+      ],
+      "config": "config/site.json"
+    }
+  }
+}

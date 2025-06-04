@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Disallow access to sensitive files
+Disallow: /.htaccess
+Disallow: /package.json
+Disallow: /README.md
+Disallow: /*.log
+
+# Sitemap location (opcional)
+# Sitemap: https://tu-dominio.com/sitemap.xml

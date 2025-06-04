@@ -1,0 +1,42 @@
+{
+  "site": {
+    "title": "Infografía: El Impacto de la IA en la Automatización de Tareas",
+    "description": "Análisis visual sobre el impacto de la IA en la automatización de tareas empresariales. Datos de McKinsey, Goldman Sachs, OpenAI y más.",
+    "keywords": "inteligencia artificial, automatización, IA, tareas empresariales, infografía, McKinsey, OpenAI",
+    "author": "Infografía IA",
+    "language": "es",
+    "locale": "es_ES"
+  },
+  "seo": {
+    "robots": "index, follow",
+    "openGraph": {
+      "title": "Infografía: El Impacto de la IA en la Automatización de Tareas",
+      "description": "Un análisis visual sobre cómo la Inteligencia Artificial está redefiniendo el trabajo, basado en estudios y proyecciones de 2023-2025.",
+      "type": "website",
+      "locale": "es_ES"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Infografía: El Impacto de la IA en la Automatización de Tareas",
+      "description": "Un análisis visual sobre cómo la Inteligencia Artificial está redefiniendo el trabajo."
+    }
+  },
+  "external": {
+    "fonts": {
+      "preconnect": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com"
+      ],
+      "stylesheets": [
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap"
+      ]
+    },    "scripts": {
+      "chartjs": "./assets/js/chart.min.js"
+    }
+  },
+  "performance": {
+    "lazyLoad": true,
+    "preloadFonts": true,
+    "minifyAssets": true
+  }
+}
