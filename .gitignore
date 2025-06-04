@@ -144,3 +144,5 @@ pnpm-lock.yaml
 *.tar
 *.zip
 
+.vercel
+.vercel/
