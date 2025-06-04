@@ -7,7 +7,7 @@
     "serve": "python -m http.server 8080",
     "dev": "python -m http.server 8080",
     "serve-legacy": "npx http-server . -p 8080 -o",
-    "build": "npm run build-js && npm run validate",
+    "build": "npm run build-js && npm run build-css-prod && npm run validate",
     "validate": "npx html-validate index.html",
     "validate-legacy": "npx html-validate infografía.html",
     "build-css": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/tailwind-compiled.css --watch",
@@ -15,13 +15,14 @@
     "build-js": "node -e \"const fs=require('fs'); fs.copyFileSync('node_modules/chart.js/dist/chart.umd.js', 'assets/js/chart.min.js'); console.log('✅ Chart.js copied to assets/js/chart.min.js');\"",
     "check-modules": "node -e \"console.log('Checking module structure...'); console.log('✅ Module structure is valid');\"",
     "deploy": "vercel --prod",
-    "preview": "vercel"
+    "preview": "vercel"  },
+  "dependencies": {
+    "chart.js": "^4.4.9",
+    "tailwindcss": "^3.4.0"
   },
   "devDependencies": {
-    "chart.js": "^4.4.9",
     "html-validate": "^8.0.0",
-    "http-server": "^14.0.0",
-    "tailwindcss": "^3.4.0"
+    "http-server": "^14.0.0"
   },
   "keywords": [
     "infografia",
