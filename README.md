@@ -76,25 +76,29 @@ Este proyecto utiliza una **arquitectura modular sencilla** que separa responsab
 npm run build
 ```
 
-## 🔧 Estructura de Archivos
-
-```
-/
-├── infografía.html         # Archivo principal
-├── diapositiva.html        # Archivo de presentación
-├── .htaccess              # Configuración del servidor
-├── robots.txt             # Directivas para crawlers
-├── 404.html               # Página de error personalizada
-├── package.json           # Configuración npm y scripts
-└── README.md              # Esta documentación
-```
-
 ## 📞 Soporte
 
 Para dudas o mejoras, consulta la documentación de las librerías utilizadas:
 - [Tailwind CSS](https://tailwindcss.com/docs)
 - [Chart.js](https://www.chartjs.org/docs/)
 - [MDN Web Docs](https://developer.mozilla.org/)
+
+## 📄 Licencia
+
+Este proyecto está licenciado bajo la **Licencia MIT** - consulta el archivo [LICENSE](LICENSE) para más detalles.
+
+### ¿Qué significa la Licencia MIT?
+
+La Licencia MIT es una licencia de software libre y de código abierto que permite:
+
+✅ **Uso comercial**: Puedes usar este código en proyectos comerciales  
+✅ **Modificación**: Puedes modificar el código según tus necesidades  
+✅ **Distribución**: Puedes distribuir el código original o modificado  
+✅ **Uso privado**: Puedes usar el código en proyectos privados  
+
+**Únicos requisitos**:
+- Incluir el aviso de copyright y la licencia en todas las copias
+- No hay garantía - el software se proporciona "tal como está"
 
 ---
 
