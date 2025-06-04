@@ -2,6 +2,10 @@
 
 Una infografía interactiva que visualiza datos sobre cómo la Inteligencia Artificial está transformando el panorama laboral empresarial.
 
+## 🌐 Demo en Vivo
+
+**Ver proyecto desplegado**: [https://iaencifras.vercel.app/](https://iaencifras.vercel.app/)
+
 ## 🏗️ Arquitectura Modular
 
 Este proyecto utiliza una **arquitectura modular sencilla** que separa responsabilidades y mejora la mantenibilidad:
